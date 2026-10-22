@@ -1,0 +1,15 @@
+{
+	"title": "My Site",
+	"description": "Starter site content",
+	"nav": [
+		{"label": "Home", "href": "#home"},
+		{"label": "About", "href": "#about"},
+		{"label": "Contact", "href": "#contact"}
+	],
+	"sections": [
+		{"id": "home", "heading": "Welcome", "content": "This is the home section."},
+		{"id": "about", "heading": "About", "content": "This is the about section."},
+		{"id": "contact", "heading": "Contact", "content": "This is the contact section."}
+	],
+	"footer": "© 2026 My Site"
+}

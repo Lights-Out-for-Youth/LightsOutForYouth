@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>My Site</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<header>
+			<nav class="top-nav" role="navigation" aria-label="Main navigation">
+				<div class="brand">
+					<img src="LOFYlogo.png" alt="LOFY logo" class="brand-logo" />
+					<span>Lights Out For Youth</span>
+				</div>
+				<ul class="nav-links">
+					<li><a href="#about">About</a></li>
+					<li><a href="#outreach">What We Do</a></li>
+					<li><a href="articles.html">Articles</a></li>
+					<li><a href="#pledges">Get Involved</a></li>
+					<li><a href="team.html">Our Team</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Hero / title slide (top of homepage) -->
+		<section class="hero" role="banner" aria-label="Home hero">
+			<div class="hero-overlay"></div>
+			<div class="hero-content">
+				<h1 class="hero-sub">Empowering and educating youth to advocate for dark skies.</h1>
+			</div>
+		</section>
+
+		<!-- About (now embedded on the home page) -->
+		<section id="about" class="about-section" aria-label="About Lights Out For Youth">
+			<div class="about-inner">
+				<h2>About Us</h2>
+				<p>
+					Lights Out for Youth is a youth-led organization dedicated to protecting our disappearing night sky. We connect students who care about light pollution and give them ways to take action in their own communities through education, local pledges, and advocacy.
+				</p>
+			</div>
+		</section>
+
+		<!-- Outreach section -->
+		<section id="outreach" class="outreach-section" aria-label="Outreach">
+			<div class="outreach-image-half">
+				<img src="prishapresentation.png" alt="LOFY member giving a presentation" class="outreach-image" />
+			</div>
+			<div class="outreach-text-half">
+				<h2 class="outreach-title">Outreach</h2>
+				<p class="outreach-text">LOFY members give presentations introducing students to light pollution and showing them how they can help protect dark skies.</p>
+			</div>
+		</section>
+
+		<!-- Pledges section -->
+		<section id="pledges" class="pledges-section" aria-label="Pledges">
+			<div class="pledges-half">
+				<h2 class="pledges-title">Pledges</h2>
+				<p class="pledges-text">LOFY pledges turn awareness into action by bringing students together to make simple changes that protect the night sky and the environment.</p>
+			</div>
+			<div class="pledges-half">
+				<h2 class="pledges-title">Participate!</h2>
+				<p class="pledges-text">Pledges are coming soon! Sign up to receive occasional LOFY newsletters and be the first to know when there’s a new way to take action with us.</p>
+
+				<!--
+					Email signup form.
+					This posts to a Google Form so responses are collected automatically in a linked Google Sheet.
+					TODO: Replace FORM_ACTION_URL with your Google Form's "formResponse" URL and
+					ENTRY_ID with the email field's entry id (see instructions provided separately).
+				-->
+				<form
+					id="signup-form"
+					class="signup-form"
+					action="https://docs.google.com/forms/d/e/FORM_ACTION_URL/formResponse"
+					method="POST"
+					target="hidden-iframe"
+				>
+					<input
+						type="email"
+						name="entry.ENTRY_ID"
+						class="signup-input"
+						placeholder="Enter your email address"
+						required
+					/>
+					<button type="submit" class="signup-button">sign me up!</button>
+				</form>
+				<p id="signup-confirmation" class="signup-confirmation" hidden>Thanks for signing up!</p>
+
+				<!-- Hidden iframe target so the page doesn't navigate away on submit -->
+				<iframe name="hidden-iframe" id="hidden-iframe" style="display:none;"></iframe>
+			</div>
+		</section>
+
+		<!-- Closing hero-style section -->
+		<section class="hero closing-hero" aria-label="Closing message">
+			<div class="hero-content closing-hero-content">
+				<h1 class="hero-sub">Let’s protect the night sky together.</h1>
+			</div>
+		</section>
+
+		<main id="root"></main>
+
+		<footer id="site-footer" class="site-footer">
+			<div class="footer-col footer-brand">
+				<img src="LOFYlogo.png" alt="LOFY logo" class="footer-logo" />
+				<p class="footer-brand-text">Lights Out<br />for Youth</p>
+			</div>
+
+			<div class="footer-col footer-contact">
+				<h3 class="footer-title">Contact us</h3>
+				<p class="footer-text">Questions? Concerns?</p>
+				<a href="mailto:contact@lightsoutforyouth.org" class="footer-email-link">contact@lightsoutforyouth.org</a>
+				<a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn">
+					<svg viewBox="0 0 24 24" class="footer-social-icon" fill="currentColor" aria-hidden="true">
+						<path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.07-.02-2.45-1.49-2.45-1.5 0-1.73 1.17-1.73 2.38v4.57h-3v-9h2.88v1.23h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59v4.74z"/>
+					</svg>
+				</a>
+			</div>
+		</footer>
+
+		<script type="module" src="main.js"></script>
+		<script>
+			// Show a confirmation message after the hidden iframe finishes loading (i.e., after submit)
+			(function () {
+				var form = document.getElementById('signup-form');
+				var iframe = document.getElementById('hidden-iframe');
+				var confirmation = document.getElementById('signup-confirmation');
+				var submitted = false;
+				if (form && iframe && confirmation) {
+					form.addEventListener('submit', function () {
+						submitted = true;
+					});
+					iframe.addEventListener('load', function () {
+						if (submitted) {
+							form.reset();
+							confirmation.hidden = false;
+							submitted = false;
+						}
+					});
+				}
+			})();
+
+			// Footer signup form confirmation
+			(function () {
+				var form = document.getElementById('footer-signup-form');
+				var iframe = document.getElementById('footer-hidden-iframe');
+				var confirmation = document.getElementById('footer-signup-confirmation');
+				var submitted = false;
+				if (form && iframe && confirmation) {
+					form.addEventListener('submit', function () {
+						submitted = true;
+					});
+					iframe.addEventListener('load', function () {
+						if (submitted) {
+							form.reset();
+							confirmation.hidden = false;
+							submitted = false;
+						}
+					});
+				}
+			})();
+		</script>
+	</body>
+</html>

@@ -677,3 +677,11 @@ body:has(.team-page) {
   margin-left: 0;
   padding-left: 0;
 }
+
+.team-isabella {
+  object-fit: cover;
+  object-position: center 20%;
+  transform: none;
+}
+
+

@@ -617,6 +617,10 @@ body:has(.team-page) {
   object-position: 60% 30%;
 }
 
+.author-alec {
+  object-position: 75% 30%;
+}
+
 .author-info h3 {
   margin: 5px 0;
   font-size: 28px;

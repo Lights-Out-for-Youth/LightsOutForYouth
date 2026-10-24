@@ -62,32 +62,38 @@
 				<h2 class="pledges-title">Participate!</h2>
 				<p class="pledges-text">Pledges are coming soon! Sign up to receive occasional LOFY newsletters and be the first to know when there’s a new way to take action with us.</p>
 
-				<!--
-					Email signup form.
-					This posts to a Google Form so responses are collected automatically in a linked Google Sheet.
-					TODO: Replace FORM_ACTION_URL with your Google Form's "formResponse" URL and
-					ENTRY_ID with the email field's entry id (see instructions provided separately).
-				-->
+				
+				<!-- LOFY Newsletter Signup -->
 				<form
-					id="signup-form"
-					class="signup-form"
-					action="https://docs.google.com/forms/d/e/FORM_ACTION_URL/formResponse"
-					method="POST"
-					target="hidden-iframe"
+				id="signup-form"
+				class="signup-form"
+				action="https://docs.google.com/forms/d/e/1FAIpQLSd74isjEon3Lml56xK51zHeyF2tO_F5nxasgjRmy2bk3kNbMQ/formResponse"
+				method="POST"
+				target="hidden-iframe"
 				>
-					<input
-						type="email"
-						name="entry.ENTRY_ID"
-						class="signup-input"
-						placeholder="Enter your email address"
-						required
-					/>
-					<button type="submit" class="signup-button">sign me up!</button>
+				<input
+					type="email"
+					name="entry.827154870"
+					class="signup-input"
+					placeholder="Enter your email address"
+					required
+				/>
+				<button type="submit" class="signup-button">
+					sign me up!
+				</button>
 				</form>
-				<p id="signup-confirmation" class="signup-confirmation" hidden>Thanks for signing up!</p>
 
-				<!-- Hidden iframe target so the page doesn't navigate away on submit -->
-				<iframe name="hidden-iframe" id="hidden-iframe" style="display:none;"></iframe>
+				<p id="signup-confirmation" class="signup-confirmation" hidden>
+				Thanks for signing up!
+				</p>
+
+				<!-- Hidden iframe prevents redirecting away from website -->
+				<iframe
+				name="hidden-iframe"
+				id="hidden-iframe"
+				style="display:none;"
+				></iframe>
+
 			</div>
 		</section>
 

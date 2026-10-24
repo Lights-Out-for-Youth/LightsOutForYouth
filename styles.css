@@ -589,3 +589,87 @@ body:has(.team-page) {
 	.team-bio { font-size: 2.6vw; }
 	.team-title { font-size: 7vw; }
 }
+
+
+/* Article Author Section */
+
+.article-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid #ddd;
+}
+
+.author-photo {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Individual author photo positions */
+
+.author-renata {
+  object-position: 60% 30%;
+}
+
+.author-info h3 {
+  margin: 5px 0;
+  font-size: 28px;
+}
+
+.author-info h3 a {
+  color: #555;
+  text-decoration: underline;
+}
+
+.author-info h3 a:hover {
+  color: #d4a900;
+}
+
+.author-info p {
+  margin: 4px 0;
+  font-size: 16px;
+  color: #777;
+}
+.author-info {
+  text-align: left;
+}
+.author-info h3,
+.author-info p {
+  text-align: left;
+  margin-left: 0;
+}
+
+@media (max-width: 600px) {
+  .article-author {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* Fix author text alignment */
+
+.article-author .author-info {
+  text-align: left;
+}
+
+.article-author .author-info h3,
+.article-author .author-info p {
+  text-align: left;
+  margin-left: 0;
+  padding-left: 0;
+  text-indent: 0;
+  width: auto;
+}
+
+.article-author .author-info h3 a {
+  display: inline;
+  margin-left: 0;
+  padding-left: 0;
+}

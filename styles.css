@@ -350,12 +350,36 @@ main { padding: 1.3vw; padding-top: var(--nav-offset); }
 	margin-top: 1vw;
 }
 
-.home-page #about,
-.home-page #pledges {
+.home-page .about-section,
+.home-page .pledges-section {
 	scroll-margin-top: var(--nav-offset);
 }
 
+#pledges:target:focus { outline: none; }
+
 .home-page #root:empty { display: none; }
+
+@media (width > 64rem) {
+	.home-page {
+		/* The desktop header contains the logo or the brand line, plus vertical padding. */
+		--home-header-height: calc(max(8.75vmin, 2.84375vw) + 5.95vh);
+	}
+
+	.home-page .top-nav .brand { line-height: 1.25; }
+
+	.home-page .about-section,
+	.home-page .outreach-section,
+	.home-page .pledges-section,
+	.home-page .closing-hero {
+		min-height: calc(100vh - var(--home-header-height));
+		scroll-margin-top: var(--home-header-height);
+	}
+
+	.home-page .about-section { padding: 2vw; }
+	.home-page .about-inner { margin: 0; }
+	.home-page .about-inner h2 { margin-bottom: 0.5em; }
+	.home-page .about-inner p { margin: 0; }
+}
 
 @media (max-width: 64rem) {
 	.home-page {

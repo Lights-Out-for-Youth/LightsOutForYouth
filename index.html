@@ -5,20 +5,22 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<title>Lights Out for Youth | Protecting the Night Sky</title>
 		<link rel="stylesheet" href="styles.css">
+		<script src="navigation.js" defer></script>
 		<meta name="description" content="Lights Out for Youth (LOFY) is a youth-led organization dedicated to reducing light pollution, protecting wildlife, and preserving our night skies.">
 		<meta property="og:title" content="Lights Out for Youth">
 		<meta property="og:description" content="Join our youth-led movement to reduce light pollution and protect the night sky.">
 		<meta property="og:type" content="website">
 		<meta property="og:url" content="https://lightsoutforyouth.org/">
 	</head>
-	<body>
+	<body class="home-page">
 		<header id="top">
 			<nav class="top-nav" role="navigation" aria-label="Main navigation">
 				<a class="brand" href="index.html#top" aria-label="Lights Out For Youth home">
 					<img src="LOFYLogoOfficial.png" alt="" class="brand-logo" />
 					<span>Lights Out For Youth</span>
 				</a>
-				<ul class="nav-links">
+				<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav-links" hidden>Menu</button>
+				<ul class="nav-links" id="main-nav-links">
 					<li><a href="#about">About</a></li>
 					<li><a href="#outreach">What We Do</a></li>
 					<li><a href="articles.html">Articles</a></li>
@@ -37,7 +39,7 @@
 		</section>
 
 		<!-- About (now embedded on the home page) -->
-		<section id="about" class="about-section" aria-label="About Lights Out For Youth">
+		<section tabindex="-1" id="about" class="about-section" aria-label="About Lights Out For Youth">
 			<div class="about-inner">
 				<h2>About Us</h2>
 				<p>
@@ -47,7 +49,7 @@
 		</section>
 
 		<!-- Outreach section -->
-		<section id="outreach" class="outreach-section" aria-label="Outreach">
+		<section tabindex="-1" id="outreach" class="outreach-section" aria-label="Outreach">
 			<div class="outreach-image-half">
 				<img src="prishapresentation.png" alt="LOFY member giving a presentation" class="outreach-image" />
 			</div>
@@ -58,7 +60,7 @@
 		</section>
 
 		<!-- Pledges section -->
-		<section id="pledges" class="pledges-section" aria-label="Pledges">
+		<section tabindex="-1" id="pledges" class="pledges-section" aria-label="Pledges">
 			<div class="pledges-half">
 				<h2 class="pledges-title">Pledges</h2>
 				<p class="pledges-text">LOFY pledges turn awareness into action by bringing students together to make simple changes that protect the night sky and the environment.</p>

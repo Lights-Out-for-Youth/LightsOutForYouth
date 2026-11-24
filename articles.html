@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Articles — LOFY</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="navigation.js" defer></script>
   </head>
-  <body>
+  <body class="articles-index">
     <header>
       <nav class="top-nav" role="navigation" aria-label="Main navigation">
 				<a class="brand" href="index.html#top" aria-label="Lights Out For Youth home">
 					<img src="LOFYLogoOfficial.png" alt="" class="brand-logo" />
 					<span>Lights Out For Youth</span>
 				</a>
-				<ul class="nav-links">
+				<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav-links" hidden>Menu</button>
+				<ul class="nav-links" id="main-nav-links">
 					<li><a href="/#about">About</a></li>
 					<li><a href="/#outreach">What We Do</a></li>
 					<li><a href="articles.html">Articles</a></li>
@@ -24,9 +26,8 @@
     </header>
 
     <main>
-      <!-- Top image occupying ~1/3 of the remaining viewport under navbar -->
       <section class="articles-page">
-        <div class="articles-image" role="img" aria-label="Girl with scope image">
+        <div class="articles-image">
           <h2 class="articles-hero-title">TOP STORIES</h2>
         </div>
 
